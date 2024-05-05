@@ -27,31 +27,3 @@ int main ()
     }
     return 0;
 }
-
-
-
-/*#include <stdio.h>
-int main ()
-{
-    int intento,N;
-    char user[50];
-    printf("Nombre del usuario\n");
-    scanf("%c", &user);
-    do
-    {
-        printf("Ingrese la contrasena: ");
-        scanf("%d", &intento);
-        if (intento==1234)
-        {
-            printf("Acceso permitido\n");
-        }
-        else
-        {
-            printf("Acceso denegado\n");
-            N=N+1;
-        }
-        
-    } while (intento!=1234 && N<=3);
-    printf("BIENVENIDO %c", user);
-}
-*/

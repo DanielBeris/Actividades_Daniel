@@ -1,10 +1,13 @@
-//Version 4 examen practico 13/05/2024
+//Version 5 examen practico 13/05/2024
 #include <stdio.h>
 #include <string.h>
 /*Esta libreria nueva añade nuevas funciones que estan enfocadas en las cadenas*/
+int SumaTotal(int Cantidad, int precio){
+    return Cantidad*precio;
+}
 int main ()
 {
-    int N, producto, i, cant, precio, factura;
+    int N, producto, cant, precio,factura;
     char usuario[100], password[3];
     printf("Cual es su nombre de usuario:\n");
     fgets(usuario, sizeof(usuario), stdin);
@@ -21,13 +24,13 @@ int main ()
             printf("Bienvenido al sistema\n");
             printf("Cuantos articulos son:");
             scanf("%d",&producto);
-            for ( i = 0; i < producto; i++)
+            for (int i = 0; i < producto; i++)
             {
                 printf("Cuantos productos adquiriste del articulo %d: \n", i+1);
                 scanf("%d", &cant);
                 printf("Cuanto cuesta la unidad: \n");
                 scanf("%d", &precio);
-                factura=(cant*precio)+factura;
+                factura=SumaTotal(cant, producto)+factura;
             } 
             printf("La factura es de: %d", factura);
         } 

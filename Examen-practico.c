@@ -1,4 +1,4 @@
-//Version 2 examen practico 13/05/2024
+//Version 4 examen practico 13/05/2024
 #include <stdio.h>
 #include <string.h>
 /*Esta libreria nueva añade nuevas funciones que estan enfocadas en las cadenas*/
@@ -9,7 +9,6 @@ int main ()
     printf("Cual es su nombre de usuario:\n");
     fgets(usuario, sizeof(usuario), stdin);
     N=1;
-    i=0;
     do
     {
         printf("Ingrese la contrasena: ");
@@ -22,15 +21,14 @@ int main ()
             printf("Bienvenido al sistema\n");
             printf("Cuantos articulos son:");
             scanf("%d",&producto);
-            do
+            for ( i = 0; i < producto; i++)
             {
-                printf("Cuantos productos adquiriste del articulo %d: \n", i);
+                printf("Cuantos productos adquiriste del articulo %d: \n", i+1);
                 scanf("%d", &cant);
                 printf("Cuanto cuesta la unidad: \n");
                 scanf("%d", &precio);
                 factura=(cant*precio)+factura;
-                i++;
-            } while(i<producto);
+            } 
             printf("La factura es de: %d", factura);
         } 
         else
